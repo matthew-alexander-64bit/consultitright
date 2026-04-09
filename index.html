@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Something awesome is on its way. Our website is under construction." />
+    <title>Under Construction — Coming Soon</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Dynamic Background -->
+    <div class="bg-container" id="bg-container">
+        <div class="bg-element bg-1"></div>
+        <div class="bg-element bg-2"></div>
+        <!-- Particles added via script -->
+    </div>
+    
+
+
+    <main class="page-wrapper">
+        <div class="status-badge" role="status">
+            Something Great is Coming
+        </div>
+
+        <div class="main-hero">
+            <h1>Do IT Right with ConsultITRight IT services</h1>
+            <p>New website &bull; Coming Soon</p>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <img 
+                src="https://cdni.iconscout.com/illustration/premium/thumb/coder-illustration-svg-download-png-2895977.png" 
+                alt="Coder Illustration" 
+                class="hero-image"
+            />
+        </div>
+    </main>
+
+    <script>
+      // Update year automatically
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+
+
+      // Create particles
+      const container = document.getElementById('bg-container');
+      const particleCount = 20;
+
+      for (let i = 0; i < particleCount; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        
+        // Random size
+        const size = Math.random() * 5 + 2 + 'px';
+        p.style.width = size;
+        p.style.height = size;
+        
+        // Random position
+        p.style.left = Math.random() * 100 + 'vw';
+        p.style.top = Math.random() * 100 + 'vh';
+        
+        // Random animation delay and duration
+        p.style.animationDelay = Math.random() * 15 + 's';
+        p.style.animationDuration = Math.random() * 10 + 10 + 's';
+        
+        container.appendChild(p);
+      }
+    </script>
+</body>
+</html>
